@@ -1,0 +1,130 @@
+.new-thread-button {
+  .message {
+    align-items: center;
+    color: var(--secondary);
+    .plus-icon {
+      margin-right: 8px;
+    }
+  }
+  .thread.with-block {
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      .thread.with-block {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.new-thread {
+  .message-input {
+    padding: 8px;
+  }
+}
+.message-input {
+  flex: 1;
+  background: #fff;
+
+  &.loading {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &.unfocused {
+    opacity: 0.5;
+    .input-options {
+      opacity: 0.5;
+    }
+  }
+
+  .autocomplete {
+    div.input {
+      background: #fff;
+      textarea.input {
+        background: #fff;
+      }
+    }
+    .input.small {
+      margin-top: -2px;
+      padding: 0;
+    }
+    .input.autoheight_container.small textarea {
+      padding-left: 0px;
+    }
+  }
+
+  .input-options {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    .option {
+      color: var(--grey-light);
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+
+      &:not(.disabled):hover {
+        color: var(--black);
+      }
+
+      &:not(.disabled) {
+        cursor: pointer;
+        color: var(--grey-dark);
+      }
+
+      .messages-input-app-icon {
+        width: 16px;
+        height: 16px;
+        background-position: center;
+        background-size: contain;
+        border-radius: var(--default-border-radius);
+      }
+    }
+  }
+
+  .ephemerals {
+    text-align: left;
+
+    .thread-centerer {
+      width: 100%;
+      .message {
+        padding: 0px;
+      }
+    }
+
+    .ephemerals_text {
+      font-size: 12px;
+      color: var(--grey-dark);
+      padding-bottom: 12px;
+      max-width: 1362px;
+      width: calc(100% - 48px);
+      display: inline-flex;
+      text-align: left;
+    }
+  }
+}
+
+.small-section.alinea {
+  .ephemerals .thread-container .sender-space {
+    width: 16px;
+  }
+}
+
+.attached-files-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+
+  .attached-file {
+    margin: 0 8px 8px 0;
+  }
+}

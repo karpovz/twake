@@ -1,0 +1,12 @@
+@import '~components/constants.scss';
+
+.emoji-mart {
+  border: none;
+  color: var(--grey-dark);
+  font-size: 14px;
+  width: unset !important;
+  left: 0px;
+  .emoji-mart-emoji {
+    padding: 7px;
+  }
+}
